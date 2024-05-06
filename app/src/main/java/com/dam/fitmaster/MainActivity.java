@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Button;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
             String password = PasswordText.getText().toString();
             Log.d("MainActivity", "Nombre de usuario: " + username);
             Log.d("MainActivity", "Contraseña: " + password);
+        });
+
+        SignupButton.setOnClickListener(view -> {
+            // Acción al hacer clic en el botón de registro
+            Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+            startActivity(intent);
         });
 
         }

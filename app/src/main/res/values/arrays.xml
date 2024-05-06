@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_levels">
+        <item>Sedentario (poco o ningún ejercicio)</item>
+        <item>Moderadamente activo (ejercicio ligero 1-3 días a la semana)</item>
+        <item>Muy activo (ejercicio moderado 3-5 días a la semana)</item>
+        <item>Altamente activo (ejercicio intenso 6-7 días a la semana)</item>
+        <item>Atleta de alto rendimiento</item>
+    </string-array>
+</resources>
