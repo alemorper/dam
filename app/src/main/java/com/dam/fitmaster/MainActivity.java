@@ -28,12 +28,11 @@ public class MainActivity extends AppCompatActivity {
             Log.d("MainActivity", "Nombre de usuario: " + username);
             Log.d("MainActivity", "Contraseña: " + password);
         });
-
         SignupButton.setOnClickListener(view -> {
             // Acción al hacer clic en el botón de registro
             Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
             startActivity(intent);
         });
 
-        }
+    }
 }
