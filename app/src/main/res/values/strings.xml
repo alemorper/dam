@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FitMaster</string>
+    <string name="logo">Logo</string>
+    <string name="ver_entrenamiento_del_d_a">Ver entrenamiento del Día</string>
+    <string name="ver_rutina_semanal">Ver rutina semanal</string>
+    <string name="ver_plan_nutricional">Ver plan nutricional</string>
 </resources>

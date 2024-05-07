@@ -23,6 +23,7 @@
             android:layout_height="200dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="50dp"
+            android:contentDescription="@string/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,9 +37,9 @@
             android:layout_margin="8dp"
             android:background="@drawable/gradient_button_mb"
             android:padding="10dp"
-            android:text="Ver entrenamiento del Día"
+            android:text="@string/ver_entrenamiento_del_d_a"
             android:textColor="#000000"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
 
@@ -49,9 +50,9 @@
             android:layout_margin="8dp"
             android:background="@drawable/gradient_button_mb"
             android:padding="10dp"
-            android:text="Ver rutina semanal"
+            android:text="@string/ver_rutina_semanal"
             android:textColor="#000000"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
 
@@ -62,9 +63,9 @@
             android:layout_margin="8dp"
             android:background="@drawable/gradient_button_mb"
             android:padding="10dp"
-            android:text="Ver plan nutricional"
+            android:text="@string/ver_plan_nutricional"
             android:textColor="#000000"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
     </LinearLayout>
