@@ -160,26 +160,34 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:paddingBottom="8dp"/>
 
-            <CheckBox
-                android:id="@+id/cbGainMuscle"
-                android:layout_width="wrap_content"
+            <RadioGroup
+                android:id="@+id/rgObjective"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Ganar masa muscular"/>
+                android:orientation="vertical">
 
-            <CheckBox
-                android:id="@+id/cbFatLoss"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Pérdida de grasa"/>
+                <RadioButton
+                    android:id="@+id/rbGainMuscle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Ganar masa muscular"/>
 
-            <CheckBox
-                android:id="@+id/cbMaintain"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:text="Mantenerse"/>
+                <RadioButton
+                    android:id="@+id/rbFatLoss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Pérdida de grasa"/>
+
+                <RadioButton
+                    android:id="@+id/rbMaintain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="Mantenerse"/>
+            </RadioGroup>
+
 
             <!-- Botón de Registro -->
             <Button

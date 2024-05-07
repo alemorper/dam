@@ -28,15 +28,19 @@ public class MainActivity extends AppCompatActivity {
         EditText UserText = findViewById(R.id.UserText);
         EditText PasswordText = findViewById(R.id.PasswordText);
 
+
         MiBaseDatos MDB = new MiBaseDatos(MainActivity.this);
         SQLiteDatabase db = MDB.getWritableDatabase();
         if (db != null){
         }else
     {
-        Toast.makeText(MainActivity.this, "FALLO AL CREAR BASE DE DATOS", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this, "Fallo en la Aplicación", Toast.LENGTH_LONG).show();
     }
-
-
+        Usuario usuarioAle = new Usuario("alemorper", "fitmaster", "Alejandro", "Moreno Perez",
+                "alemorper4@alum.us.es", 22, "Masculino", "Moderadamente activo",
+                "Masa Muscular",  "4 dias a la semana");
+        MDB.insertarUsuario(usuarioAle);
+        Log.d("MainActivity", "Añadido usuario a BBDD");
 
 
 
@@ -52,7 +56,10 @@ public class MainActivity extends AppCompatActivity {
             // Acción al hacer clic en el botón de registro
             Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
             startActivity(intent);
+
+            startActivity(intent);
         });
+
 
         }
 }
