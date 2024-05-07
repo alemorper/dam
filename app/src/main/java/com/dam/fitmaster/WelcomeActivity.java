@@ -11,27 +11,30 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    private EditText etFullName, etEmail, etAge, etHeight, etWeight;
+    private EditText etName, etSName, etEmail, etAge, etUsername, etPassword;
     private RadioGroup rgGender;
-    private Spinner spinnerActivityLevel;
-    private CheckBox cbGainMuscle, cbDaily;
-    // Define más variables para otros CheckBoxes y componentes.
+    private Spinner spinnerActivityLevel, spinnerTrainingFrequency;
+    private CheckBox cbGainMuscle, cbFatLoss, cbMaintain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        etFullName = findViewById(R.id.etFullName);
+        etName = findViewById(R.id.etName);
+        etSName = findViewById(R.id.etSName);
         etEmail = findViewById(R.id.etEmail);
         etAge = findViewById(R.id.etAge);
-        etHeight = findViewById(R.id.etHeight);
-        etWeight = findViewById(R.id.etWeight);
+        etUsername = findViewById(R.id.etUsername);
+        etPassword = findViewById(R.id.etPassword);
+        //etHeight = findViewById(R.id.etHeight);
+        //etWeight = findViewById(R.id.etWeight);
         rgGender = findViewById(R.id.rgGender);
         spinnerActivityLevel = findViewById(R.id.spinnerActivityLevel);
+        spinnerTrainingFrequency = findViewById(R.id.spinnerTrainingFrequency);
         cbGainMuscle = findViewById(R.id.cbGainMuscle);
-        //cbDaily = findViewById(R.id.cbDaily);
-        // Inicializa los otros CheckBoxes y componentes aquí.
+        cbFatLoss = findViewById(R.id.cbFatLoss);
+        cbMaintain = findViewById(R.id.cbMaintain);
     }
 
     public void onRegisterClicked(View view) {

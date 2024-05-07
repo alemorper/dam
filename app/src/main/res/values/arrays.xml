@@ -7,4 +7,11 @@
         <item>Altamente activo (ejercicio intenso 6-7 días a la semana)</item>
         <item>Atleta de alto rendimiento</item>
     </string-array>
+
+    <string-array name="training_frequency">
+        <item>2 días a la semana</item>
+        <item>3 días a la semana</item>
+        <item>4 días a la semana</item>
+        <item>5 días a la semana</item>
+    </string-array>
 </resources>
