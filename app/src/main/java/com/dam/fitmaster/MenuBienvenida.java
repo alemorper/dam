@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Registro1 extends AppCompatActivity {
+public class MenuBienvenida extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro1);
+        setContentView(R.layout.activity_menu_bienvenida);
     }
 }
