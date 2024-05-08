@@ -39,18 +39,27 @@ public class MainActivity extends AppCompatActivity {
     }
         Usuario usuarioAle = new Usuario("alemorper", "fitmaster", "Alejandro", "Moreno Perez",
                 "alemorper4@alum.us.es", 22, "Masculino", "Moderadamente activo",
-                "Masa Muscular",  "4 dias a la semana");
+                "Ganar masa muscular",  "4 días a la semana");
         MDB.insertarUsuario(usuarioAle);
         Log.d("MainActivity", "Añadido usuario a BBDD");
 
 
 
         LoginButton.setOnClickListener(view -> {
+
             // Acción al hacer clic en el botón de inicio de sesión
             String username = UserText.getText().toString();
             String password = PasswordText.getText().toString();
             Log.d("MainActivity", "Nombre de usuario: " + username);
             Log.d("MainActivity", "Contraseña: " + password);
+
+            if (MDB.validarCredenciales(username, password) == true) {
+                Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
+                startActivity(intent);
+            }else {
+                Toast.makeText(MainActivity.this, "Credenciales incorrectas. Inténtalo de nuevo.", Toast.LENGTH_SHORT).show();
+            }
+
         });
 
         SignupButton.setOnClickListener(view -> {
@@ -64,3 +73,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
 }
+
+

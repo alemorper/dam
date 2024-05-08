@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 import android.annotation.SuppressLint;
 
 public class MiBaseDatos extends SQLiteOpenHelper {
@@ -84,6 +85,72 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         }
         db.close();
         return (salida > 0);
+    }
+
+    public boolean borrarUsuario(String usuario) {
+        SQLiteDatabase db = getWritableDatabase();
+        long salida = 0;
+        if (db != null) {
+            salida = db.delete("usuarios", "usuario=?", new String[]{usuario}); //Eliminamos al usuario enviado como parametro
+        }
+        db.close();
+        return salida > 0;
+    }
+    public boolean validarCredenciales(String username, String password) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = null; //Objeto Cursor proporciona acceso a los resultados de una consulta
+        boolean salida = false;
+        int count = -1;
+
+            // Consulta para verificar las credenciales en la base de datos
+            String query = "SELECT COUNT(*) FROM usuarios WHERE usuario = ? AND contraseña = ?"; //Consulta SQL
+            cursor = db.rawQuery(query, new String[]{username, password});
+
+            // Si el cursor tiene al menos una fila, las credenciales son válidas
+            if (cursor != null && cursor.moveToFirst()) {
+                count = cursor.getInt(0);
+                if (count >= 1) {
+                    salida = true;
+                }
+            }
+
+            // Cierra el cursor y la base de datos
+            if (cursor != null) {
+                cursor.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+            Log.d("MiBaseDatos","Valor de salida " + salida + "  Valor de count " + count);
+        return salida;
+    }
+
+    public boolean verificaUsuarioRep(String username) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = null;
+        boolean usuarioRepetido = false;
+        int count = -1;
+            // Consulta para verificar si el usuario ya existe en la base de datos
+            String query = "SELECT COUNT(*) FROM usuarios WHERE usuario = ?";
+            cursor = db.rawQuery(query, new String[]{username});
+
+            // Si el cursor tiene al menos una fila y el conteo es mayor que cero, significa que el usuario está repetido
+            if (cursor != null && cursor.moveToFirst()) {
+                count = cursor.getInt(0);
+                if (count > 0) {
+                    usuarioRepetido = true;
+                }
+            }
+
+            // Cierra el cursor y la base de datos
+            if (cursor != null) {
+                cursor.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        Log.d("MiBaseDatos","Valor de usuarioRepetido " + usuarioRepetido + "  Valor de count " + count);
+        return usuarioRepetido;
     }
 
 }

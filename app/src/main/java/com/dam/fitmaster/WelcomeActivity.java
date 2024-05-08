@@ -12,6 +12,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -93,9 +95,17 @@ public class WelcomeActivity extends AppCompatActivity {
             MiBaseDatos MDB = new MiBaseDatos(WelcomeActivity.this);
             SQLiteDatabase db = MDB.getWritableDatabase();
             if (db != null) {
-            Usuario usuario1 = new Usuario(usuario,password,nombre,apellido,email,edad,genero,nivelActividad,objetivo,frecuenciaEntrenamiento);
-            MDB.insertarUsuario(usuario1);
-            Log.d("WelcomeActivity","Usuario añadido con éxito");
+                if(MDB.verificaUsuarioRep(usuario) == false) {
+                    Usuario usuario1 = new Usuario(usuario, password, nombre, apellido, email, edad, genero, nivelActividad, objetivo, frecuenciaEntrenamiento);
+                    MDB.insertarUsuario(usuario1);
+                    Log.d("WelcomeActivity","Usuario añadido con éxito");
+
+                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(WelcomeActivity.this, "El nombre de usuario ya existe, seleccione otro", Toast.LENGTH_SHORT).show();
+                }
+
             }
 
         });
