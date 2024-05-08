@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.annotation.SuppressLint;
 
 public class MiBaseDatos extends SQLiteOpenHelper {
 
@@ -36,6 +37,8 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
 
     }
+    // Método para obtener la contraseña del usuario por su nombre de usuario
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
