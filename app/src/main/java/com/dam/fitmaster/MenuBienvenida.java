@@ -1,6 +1,8 @@
 package com.dam.fitmaster;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ public class MenuBienvenida extends AppCompatActivity {
         Button entreno_dia = findViewById(R.id.entreno_dia);
         Button rutina = findViewById(R.id.rutina);
         Button dieta = findViewById(R.id.dieta);
+        Button logout = findViewById(R.id.logout);
 
         entreno_dia.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,5 +43,17 @@ public class MenuBienvenida extends AppCompatActivity {
 
             }
         });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("recuerdame", "false");
+                editor.apply();
+                finish();
+            }
+        });
+
+
     }
 }

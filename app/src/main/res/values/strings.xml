@@ -6,4 +6,5 @@
     <string name="ver_plan_nutricional">Ver plan nutricional</string>
     <string name="recuerdame">Recuerdame</string>
     <string name="password">Contraseña</string>
+    <string name="logout">Cerrar Sesión</string>
 </resources>

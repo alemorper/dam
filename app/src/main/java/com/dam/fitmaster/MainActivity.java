@@ -2,12 +2,16 @@ package com.dam.fitmaster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.CheckBox;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +22,9 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity {
-    EditText usuario, password;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +34,16 @@ public class MainActivity extends AppCompatActivity {
         Button SignupButton = findViewById(R.id.SignupButton);
         EditText UserText = findViewById(R.id.UserText);
         EditText PasswordText = findViewById(R.id.PasswordText);
+        CheckBox recuerdame = findViewById(R.id.Recuerdame);
 
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox = preferences.getString("recuerdame", "");
+        if(checkbox.equals("true")){
+            Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
+            startActivity(intent);
+        }else if(checkbox.equals("false")){
+            Toast.makeText(this, "Porfavor, regístrate", Toast.LENGTH_SHORT).show();
+        }
 
         MiBaseDatos MDB = new MiBaseDatos(MainActivity.this);
         SQLiteDatabase db = MDB.getWritableDatabase();
@@ -68,6 +83,24 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
 
             startActivity(intent);
+        });
+
+        recuerdame.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if(buttonView.isChecked()){
+                SharedPreferences preferences1 = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences1.edit();
+               editor.putString("recuerdame", "true");
+                editor.apply();
+                Toast.makeText(MainActivity.this, "Checked", Toast.LENGTH_SHORT).show();
+
+
+            }else if(!buttonView.isChecked()){
+                SharedPreferences preferences1 = getSharedPreferences("checkbox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences1.edit();
+                editor.putString("recuerdame", "false");
+                editor.apply();
+                Toast.makeText(MainActivity.this, "Unchecked", Toast.LENGTH_SHORT).show();
+            }
         });
 
 
