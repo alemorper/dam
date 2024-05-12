@@ -55,8 +55,13 @@ public class WelcomeActivity extends AppCompatActivity {
             String apellido = etSName.getText().toString();
             String password = etPassword.getText().toString();
             String email = etEmail.getText().toString();
-            int edad = Integer.parseInt(etAge.getText().toString());
-            //Obtener genero
+            int edad;
+            try {
+                edad = Integer.parseInt(etAge.getText().toString());
+            } catch (NumberFormatException e) {
+                Toast.makeText(WelcomeActivity.this, "Por favor, introduzca una edad válida.", Toast.LENGTH_SHORT).show();
+                return;
+            }
             int radioButtonId = rgGender.getCheckedRadioButtonId();
             String genero = "Masculino";
             if (radioButtonId != -1) { // Se ha seleccionado algún RadioButton
@@ -72,8 +77,6 @@ public class WelcomeActivity extends AppCompatActivity {
                 objetivo = radioButton.getText().toString();
 
             }
-
-
 
             // Obtener el nivel de actividad seleccionado en el Spinner
             String nivelActividadTemporal = spinnerActivityLevel.getSelectedItem().toString();
@@ -95,14 +98,24 @@ public class WelcomeActivity extends AppCompatActivity {
             MiBaseDatos MDB = new MiBaseDatos(WelcomeActivity.this);
             SQLiteDatabase db = MDB.getWritableDatabase();
             if (db != null) {
-                if(MDB.verificaUsuarioRep(usuario) == false) {
+                if (!MDB.verificaUsuarioRep(usuario)) {
+                    if (usuario.isEmpty() || password.isEmpty() || nombre.isEmpty() || apellido.isEmpty() || email.isEmpty()) {
+                        Toast.makeText(WelcomeActivity.this, "Por favor, complete todos los campos requeridos.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
                     Usuario usuario1 = new Usuario(usuario, password, nombre, apellido, email, edad, genero, nivelActividad, objetivo, frecuenciaEntrenamiento);
-                    MDB.insertarUsuario(usuario1);
-                    Log.d("WelcomeActivity","Usuario añadido con éxito");
+                    if (MDB.insertarUsuario(usuario1)) {
+                        // Guardar preferencias en SharedPreferences
+                        MDB.guardarPreferenciasUsuario(WelcomeActivity.this, objetivo, frecuenciaEntrenamiento);
 
-                    Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }else{
+                        Log.d("WelcomeActivity", "Usuario añadido con éxito");
+                        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(WelcomeActivity.this, "Error al añadir usuario. Intente de nuevo.", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
                     Toast.makeText(WelcomeActivity.this, "El nombre de usuario ya existe, seleccione otro", Toast.LENGTH_SHORT).show();
                 }
 
