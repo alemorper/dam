@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
         Usuario usuarioAle = new Usuario("alemorper", "fitmaster", "Alejandro", "Moreno Perez",
                 "alemorper4@alum.us.es", 22, "Masculino", "Moderadamente activo",
-                "Ganar masa muscular",  "4 días a la semana");
+                "Ganar masa muscular",  "2 días a la semana");
         MDB.insertarUsuario(usuarioAle);
         Log.d("MainActivity", "Añadido usuario a BBDD");
 
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             Log.d("MainActivity", "Nombre de usuario: " + username);
             Log.d("MainActivity", "Contraseña: " + password);
 
+
             if (MDB.validarCredenciales(username, password)) {
                 Usuario usuario = MDB.getDetallesUsuario(username);
                 if (usuario != null) {
@@ -79,12 +80,12 @@ public class MainActivity extends AppCompatActivity {
                     editor.apply();
 
                     Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
+                    intent.putExtra("usuario", username);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "No se encontraron detalles del usuario.", Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
 
         SignupButton.setOnClickListener(view -> {

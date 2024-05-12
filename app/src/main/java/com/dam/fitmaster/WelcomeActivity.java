@@ -107,7 +107,7 @@ public class WelcomeActivity extends AppCompatActivity {
                     if (MDB.insertarUsuario(usuario1)) {
                         // Guardar preferencias en SharedPreferences
                         MDB.guardarPreferenciasUsuario(WelcomeActivity.this, objetivo, frecuenciaEntrenamiento);
-
+                        MDB.insertarEntreno(usuario,getNumeroDiasEntrenamiento(frecuenciaEntrenamiento));
                         Log.d("WelcomeActivity", "Usuario añadido con éxito");
                         Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -145,5 +145,22 @@ public class WelcomeActivity extends AppCompatActivity {
                 return ""; // En caso de que el elemento no coincida con ninguno de los esperados
         }
     }
+    public int getNumeroDiasEntrenamiento(String frecuenciaEntreno) {
+        switch (frecuenciaEntreno) {
+            case "2 días a la semana":
+                Log.d("WelcomeActivity", "2 dias a la semana convertido a int");
+                return 2;
+
+            case "3 días a la semana":
+                return 3;
+            case "4 días a la semana":
+                return 4;
+            case "5 días a la semana":
+                return 5;
+            default:
+                return 2; // Devuelve 0 si la frecuencia no coincide con ninguna de las opciones conocidas
+        }
+    }
+
 
 }

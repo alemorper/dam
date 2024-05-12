@@ -15,23 +15,31 @@ public class MenuBienvenida extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_bienvenida);
-
+        Intent intent = getIntent();
+        String usuario = "";
+        if (intent != null)
+             usuario = intent.getStringExtra("usuario");
         Button entreno_dia = findViewById(R.id.entreno_dia);
         Button rutina = findViewById(R.id.rutina);
         Button dieta = findViewById(R.id.dieta);
         Button logout = findViewById(R.id.logout);
 
+        String finalUsuario = usuario;
         entreno_dia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuBienvenida.this, "Botón 1 presionado", Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(MenuBienvenida.this, "Botón 1 presionado", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MenuBienvenida.this, EntrenamientoDiaActivity.class);
+                intent.putExtra("usuario", finalUsuario);
+                startActivity(intent);
             }
         });
 
         rutina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Toast.makeText(MenuBienvenida.this, "Botón 2 presionado", Toast.LENGTH_SHORT).show();
+
                 // Iniciar RutinaSemanalActivity
                 Intent intent = new Intent(MenuBienvenida.this, RutinaSemanalActivity.class);
                 startActivity(intent);
@@ -41,7 +49,7 @@ public class MenuBienvenida extends AppCompatActivity {
         dieta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuBienvenida.this, "Botón 3 presionado", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MenuBienvenida.this, "Botón 3 presionado", Toast.LENGTH_SHORT).show();
 
             }
         });

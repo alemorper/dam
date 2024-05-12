@@ -490,6 +490,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
             "detalle TEXT NOT NULL" +
             ")";
 
+    private static final String TABLA_ENTRENOS = "CREATE TABLE IF NOT EXISTS entrenos (" +
+            "usuario TEXT PRIMARY KEY," + // Columna usuario como clave primaria
+            "frecuencia_semanal INTEGER CHECK(frecuencia_semanal BETWEEN 2 AND 5)," + // Columna para la frecuencia semanal con restricción CHECK
+            "numero_semana INTEGER DEFAULT 0," + // Columna para el número de semanas entrenadas
+            "dias_entrenados INTEGER DEFAULT 0" + // Columna para el número de días entrenados con valor predeterminado
+            ")";
+
 
     public MiBaseDatos(Context context) {
         super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
@@ -501,6 +508,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(TABLA_USUARIO);
         db.execSQL(TABLA_RUTINAS);
+        db.execSQL(TABLA_ENTRENOS);
         insertarRutinaInicial(db);
         Log.d("MiBaseDatos", "Tablas de Base de Datos creadas...");
     }
@@ -510,6 +518,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         Log.d("MiBaseDatos", "OnUpgrade");
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_USUARIO);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_RUTINAS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_ENTRENOS);
         onCreate(db);
     }
 
@@ -631,6 +640,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("objetivo", objetivo);
         editor.putString("frecuencia", frecuencia);
+
         editor.apply();
     }
 
@@ -681,5 +691,128 @@ public class MiBaseDatos extends SQLiteOpenHelper {
 
         return rutina;
     }
+    public void insertarEntreno( String usuario, int frecuenciaSemanal) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("usuario", usuario);
+        cv.put("frecuencia_semanal", frecuenciaSemanal);
+        cv.put("numero_semana",1);
+        cv.put("dias_entrenados",1);
+        db.insert("entrenos", null, cv);
+    }
+
+    public boolean incrementarDiaEntrenado(String usuario, int frecuencia) {
+        //La funcion devolvera true cuando una semana haya sido incrementada
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues valores = new ContentValues();
+
+        // WHERE clause para especificar el usuario
+        String user = "usuario = ?";
+        String[] arg = {usuario};
+        int dias = obtenerDiasEntrenados(usuario);
+        if(dias == frecuencia) {
+            // Actualizar la fila correspondiente al usuario
+            valores.put("dias_entrenados", 1);
+            int numero_semana = obtenerNumeroSemanas(usuario);
+            valores.put("numero_semana", numero_semana + 1);
+            db.update("entrenos",valores, user,arg);
+            return true;
+        }else{
+            valores.put("dias_entrenados", dias + 1);
+            db.update("entrenos", valores, user, arg);
+
+        }
+        return false;
+    }
+
+    @SuppressLint("Range")
+    public int obtenerDiasEntrenados( String usuario) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Columnas que queremos recuperar
+        String[] columnas = {"dias_entrenados"};
+
+        // Cláusula WHERE para especificar el usuario
+        String whereClause = "usuario = ?";
+
+        // Argumentos para reemplazar el placeholder en la cláusula WHERE
+        String[] whereArgs = {usuario};
+
+        // Realizar la consulta
+        Cursor cursor = db.query("entrenos", columnas, whereClause, whereArgs, null, null, null);
+
+        // Inicializar el valor de días entrenados
+        int diasEntrenados = 0;
+
+        // Verificar si se encontraron resultados y obtener el valor de días entrenados
+        if (cursor.moveToFirst()) {
+            diasEntrenados = cursor.getInt(cursor.getColumnIndex("dias_entrenados"));
+        }
+
+        // Cerrar el cursor
+        cursor.close();
+
+        // Devolver el valor de días entrenados
+        return diasEntrenados;
+    }
+    @SuppressLint("Range")
+    public int obtenerNumeroSemanas( String usuario) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Columnas que queremos recuperar
+        String[] columnas = {"numero_semana"};
+
+        // Cláusula WHERE para especificar el usuario
+        String whereClause = "usuario = ?";
+
+        // Argumentos para reemplazar el placeholder en la cláusula WHERE
+        String[] whereArgs = {usuario};
+
+        // Realizar la consulta
+        Cursor cursor = db.query("entrenos", columnas, whereClause, whereArgs, null, null, null);
+
+        // Inicializar el valor de días entrenados
+        int numero_semana = 0;
+
+        // Verificar si se encontraron resultados y obtener el valor de días entrenados
+        if (cursor.moveToFirst()) {
+            numero_semana = cursor.getInt(cursor.getColumnIndex("numero_semana"));
+        }
+
+        // Cerrar el cursor
+        cursor.close();
+
+        // Devolver el valor de días entrenados
+        return numero_semana;
+    }
+    @SuppressLint("Range")
+    private String obtenerFrecuenciaEntreno(String usuario) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        // Columnas que queremos recuperar
+        String[] columnas = {"frecuencia_entreno"};
+
+        // Cláusula WHERE para especificar el usuario
+        String whereClause = "usuario = ?";
+
+        // Argumentos para reemplazar el placeholder en la cláusula WHERE
+        String[] whereArgs = {usuario};
+
+        // Realizar la consulta
+        Cursor cursor = db.query("usuarios", columnas, whereClause, whereArgs, null, null, null);
+
+        // Inicializar la frecuencia de entrenamiento
+        String frecuenciaEntreno = "";
+
+        // Verificar si se encontraron resultados y obtener la frecuencia de entrenamiento
+        if (cursor.moveToFirst()) {
+            frecuenciaEntreno = cursor.getString(cursor.getColumnIndex("frecuencia_entreno"));
+        }
+
+        // Cerrar el cursor
+        cursor.close();
+
+        // Devolver la frecuencia de entrenamiento
+        return frecuenciaEntreno;
+    }
+
 
 }
