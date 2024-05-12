@@ -48,8 +48,10 @@ public class MenuBienvenida extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
+                SharedPreferences prefs = getSharedPreferences("prefs_usuario", MODE_PRIVATE);
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.remove("objetivo");
+                editor.remove("frecuencia");
                 editor.putString("recuerdame", "false");
                 editor.apply();
                 finish();

@@ -33,6 +33,10 @@ public class Usuario {
         //this.parteCuerpoFav = parteCuerpoFav;
     }
 
+    public Usuario (){
+
+    }
+
     // Getters y setters para los atributos
     public String getUsuario() {
         return usuario;

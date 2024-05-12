@@ -180,6 +180,31 @@ public class MiBaseDatos extends SQLiteOpenHelper {
             Log.d("MiBaseDatos","Valor de salida " + salida + "  Valor de count " + count);
         return salida;
     }
+
+    @SuppressLint("Range")
+    public Usuario getDetallesUsuario(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Usuario usuario = null;
+
+        Cursor cursor = db.rawQuery("SELECT * FROM usuarios WHERE usuario = ?", new String[]{username});
+        if (cursor.moveToFirst()) {
+            usuario = new Usuario();
+            usuario.setUsuario(cursor.getString(cursor.getColumnIndex("usuario")));
+            usuario.setContraseña(cursor.getString(cursor.getColumnIndex("contraseña")));
+            usuario.setNombre(cursor.getString(cursor.getColumnIndex("nombre")));
+            usuario.setApellidos(cursor.getString(cursor.getColumnIndex("apellidos")));
+            usuario.setCorreo(cursor.getString(cursor.getColumnIndex("correo")));
+            usuario.setEdad(cursor.getInt(cursor.getColumnIndex("edad")));
+            usuario.setGenero(cursor.getString(cursor.getColumnIndex("genero")));
+            usuario.setNivelActual(cursor.getString(cursor.getColumnIndex("nivel_actual")));
+            usuario.setObjetivo(cursor.getString(cursor.getColumnIndex("objetivo")));
+            usuario.setFrecuenciaEntreno(cursor.getString(cursor.getColumnIndex("frecuencia_entreno")));
+        }
+        cursor.close();
+        db.close();
+
+        return usuario;
+    }
     public void guardarPreferenciasUsuario(Context context, String objetivo, String frecuencia) {
         SharedPreferences prefs = context.getSharedPreferences("prefs_usuario", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

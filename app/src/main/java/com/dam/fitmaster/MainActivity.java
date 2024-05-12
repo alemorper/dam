@@ -65,14 +65,24 @@ public class MainActivity extends AppCompatActivity {
             // Acción al hacer clic en el botón de inicio de sesión
             String username = UserText.getText().toString();
             String password = PasswordText.getText().toString();
+
             Log.d("MainActivity", "Nombre de usuario: " + username);
             Log.d("MainActivity", "Contraseña: " + password);
 
-            if (MDB.validarCredenciales(username, password) == true) {
-                Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
-                startActivity(intent);
-            }else {
-                Toast.makeText(MainActivity.this, "Credenciales incorrectas. Inténtalo de nuevo.", Toast.LENGTH_SHORT).show();
+            if (MDB.validarCredenciales(username, password)) {
+                Usuario usuario = MDB.getDetallesUsuario(username);
+                if (usuario != null) {
+                    SharedPreferences prefs = getSharedPreferences("prefs_usuario", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putString("objetivo", usuario.getObjetivo());
+                    editor.putString("frecuencia", usuario.getFrecuenciaEntreno());
+                    editor.apply();
+
+                    Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "No se encontraron detalles del usuario.", Toast.LENGTH_SHORT).show();
+                }
             }
 
         });
