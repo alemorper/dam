@@ -2,6 +2,7 @@ package com.dam.fitmaster;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
@@ -31,8 +32,9 @@ public class MenuBienvenida extends AppCompatActivity {
         rutina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuBienvenida.this, "Botón 2 presionado", Toast.LENGTH_SHORT).show();
-
+                // Iniciar RutinaSemanalActivity
+                Intent intent = new Intent(MenuBienvenida.this, RutinaSemanalActivity.class);
+                startActivity(intent);
             }
         });
 
