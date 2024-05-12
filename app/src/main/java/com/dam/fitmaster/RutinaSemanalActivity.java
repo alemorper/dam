@@ -26,12 +26,7 @@ public class RutinaSemanalActivity extends AppCompatActivity {
         if (rutina.equals("No se encontró una rutina para los criterios seleccionados.")) {
             tvRutinaContent.setText(rutina);
         } else {
-            tvRutinaContent.setText(Html.fromHtml(formatRutina(rutina), Html.FROM_HTML_MODE_LEGACY));
+            tvRutinaContent.setText(Html.fromHtml(rutina, Html.FROM_HTML_MODE_LEGACY));
         }
-    }
-
-    private String formatRutina(String rutina) {
-        // Aquí puedes añadir más formato, como colores o tamaños de texto diferentes
-        return rutina.replace("**", "<b>").replace("##", "<b>").replace("\n", "<br/>");
     }
 }
