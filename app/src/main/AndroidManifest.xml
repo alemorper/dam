@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".EntrenamientoDiaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuBienvenida"
             android:exported="false" />
         <activity
