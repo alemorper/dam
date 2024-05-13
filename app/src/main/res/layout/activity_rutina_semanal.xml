@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -39,15 +40,16 @@
                     android:gravity="center"
                     android:padding="8dp"
                     android:textColor="#000" />
-
-                <TextView
+            </LinearLayout>
+                <WebView
                     android:id="@+id/tvRutinaContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:lineSpacingExtra="6dp"
-                    android:textColor="#666" />
-            </LinearLayout>
+                    android:textColor="#666"
+                    tools:ignore="WebViewLayout" />
+
         </androidx.cardview.widget.CardView>
     </ScrollView>
 </RelativeLayout>

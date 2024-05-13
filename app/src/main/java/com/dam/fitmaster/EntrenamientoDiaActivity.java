@@ -17,6 +17,7 @@ import java.util.Locale;
 public class EntrenamientoDiaActivity extends AppCompatActivity {
     private TextView dia, dia_entrenamiento,semana_entrenamiento;
     private CalendarView calendario;
+    private Button training_completed, rutina;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +25,9 @@ public class EntrenamientoDiaActivity extends AppCompatActivity {
         dia = findViewById(R.id.dateText);
         dia_entrenamiento = findViewById(R.id.DayText);
         semana_entrenamiento = findViewById(R.id.WeekText);
-        Button training_completed = findViewById(R.id.TrainingButton);
+        training_completed = findViewById(R.id.TrainingButton);
+        rutina = findViewById(R.id.RutinaButton);
+
         Intent intent = getIntent();
         String usuario = "";
         if (intent != null)
@@ -81,6 +84,16 @@ public class EntrenamientoDiaActivity extends AppCompatActivity {
                 MDB.incrementarDiaEntrenado(finalUsuario,frecuenciaEntrenoNumerica);
 
                 Intent intent = new Intent(EntrenamientoDiaActivity.this, MenuBienvenida.class);
+                intent.putExtra("usuario", finalUsuario);
+                startActivity(intent);
+            }
+        });
+
+        rutina.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EntrenamientoDiaActivity.this, RutinaSemanalActivity.class);
                 intent.putExtra("usuario", finalUsuario);
                 startActivity(intent);
             }

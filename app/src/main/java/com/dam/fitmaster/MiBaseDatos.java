@@ -25,17 +25,17 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática o cinta)<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios Compuestos</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 4 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 8-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebanca'>Press de banca</a></strong> - 4 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbarra'>Remo con barra</a></strong> - 3 series de 8-12 repeticiones</li>" +
                     "<li><strong>Ejercicios de Aislamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con barra</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de tríceps en polea alta</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconbarra'>Curl de bíceps con barra</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdetricepsenpoleaalta'>Extensiones de tríceps en polea alta</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Trabajo de Hombros y Pecho</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 12-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressmilitarconbarra'>Press militar con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacioneslateralesconmancuernas'>Elevaciones laterales con mancuernas</a></strong> - 3 series de 12-15 repeticiones</li>" +
                     "<li><strong>Core y Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Plancha</strong> - 3 series de 30-60 segundos<br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://plancha'>Plancha</a></strong> - 3 series de 30-60 segundos<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crunches'>Crunches</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 2: Enfoque en Parte Inferior del Cuerpo</h3>" +
                     "<ol>" +
@@ -43,17 +43,17 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática o cinta)<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios Compuestos</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 4 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Peso muerto</strong> - 3 series de 8-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillas'>Sentadillas</a></strong> - 4 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pesomuerto'>Peso muerto</a></strong> - 3 series de 8-12 repeticiones</li>" +
                     "<li><strong>Ejercicios de Aislamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de piernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de piernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldepiernas'>Curl de piernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdepiernas'>Extensiones de piernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Trabajo de Glúteos y Piernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Puentes de glúteo</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Estocadas</strong> - 3 series de 12-15 repeticiones por pierna</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://puentesdegluteo'>Puentes de glúteo</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://estocadas'>Estocadas</a></strong> - 3 series de 12-15 repeticiones por pierna</li>" +
                     "<li><strong>Core y Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Levantamientos de piernas colgantes</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Bicicleta abdominal</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://levantamientosdepiernascolgantes'>Levantamientos de piernas colgantes</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://bicicletaabdominal'>Bicicleta abdominal</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Consejos Generales</h3>" +
                     "<ul>" +
@@ -62,6 +62,9 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Nutrición</strong>: Asegúrate de tener una dieta rica en proteínas y calorías suficientes para apoyar el crecimiento muscular.</li>" +
                     "<li><strong>Hidratación</strong>: Mantente bien hidratado antes, durante y después de tus entrenamientos.</li>" +
                     "</ul>";
+
+
+
     String detalleRutinaGanarMasa3Dias =
             "<h3>Día 1: Pecho y Tríceps</h3>" +
                     "<ol>" +
@@ -69,15 +72,15 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio suave<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Pecho</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca inclinado con mancuernas</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Cruces de cables</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebanca'>Press de banca</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebancainclinadoconmancuernas'>Press de banca inclinado con mancuernas</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crucesdecables'>Cruces de cables</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Tríceps</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Fondos en paralelas</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press francés</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de tríceps en polea alta</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://fondosenparalelas'>Fondos en paralelas</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressfrances'>Press francés</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdetricepsenpoleaalta'>Extensiones de tríceps en polea alta</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de piernas</strong> - 3 series de 12-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdepiernas'>Elevaciones de piernas</a></strong> - 3 series de 12-15 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 2: Espalda y Bíceps</h3>" +
                     "<ol>" +
@@ -85,14 +88,14 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio suave<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Espalda</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Peso muerto</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalones al pecho</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pesomuerto'>Peso muerto</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbarra'>Remo con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://jalonesalpecho'>Jalones al pecho</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "<li><strong>Bíceps</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl con mancuernas alternado</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curlconbarra'>Curl con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curlconmancuernasalternado'>Curl con mancuernas alternado</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crunches'>Crunches</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 3: Piernas y Hombros</h3>" +
                     "<ol>" +
@@ -100,15 +103,15 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio suave<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Piernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de piernas</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de piernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillas'>Sentadillas</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://prensadepiernas'>Prensa de piernas</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldepiernas'>Curl de piernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Hombros</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones frontales con mancuernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressmilitar'>Press militar</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacioneslateralesconmancuernas'>Elevaciones laterales con mancuernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesfrontalesconmancuernas'>Elevaciones frontales con mancuernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Plancha</strong> - 3 series de 30-60 segundos</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://plancha'>Plancha</a></strong> - 3 series de 30-60 segundos</li>" +
                     "</ol>" +
                     "<h3>Consejos Generales</h3>" +
                     "<ul>" +
@@ -117,6 +120,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Alimentación</strong>: Consumir suficientes proteínas y calorías es crucial para el crecimiento muscular.</li>" +
                     "<li><strong>Hidratación</strong>: Beber agua suficiente antes, durante y después del entrenamiento ayuda a mejorar el rendimiento y la recuperación.</li>" +
                     "</ul>";
+
     String detalleRutinaGanarMasa4Dias =
             "<h3>Día 1: Pecho y Tríceps</h3>" +
                     "<ol>" +
@@ -124,13 +128,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Pecho</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press inclinado con mancuernas</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Aperturas con mancuernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebanca'>Press de banca</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressinclinadoconmancuernas'>Press inclinado con mancuernas</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://aperturasconmancuernas'>Aperturas con mancuernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Tríceps</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Dips o fondos en paralelas</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de tríceps en polea alta</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press francés con mancuernas</strong> - 3 series de 8-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://dipsofondosenparalelas'>Dips o fondos en paralelas</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdetricepsenpoleaalta'>Extensiones de tríceps en polea alta</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressfrancesconmancuernas'>Press francés con mancuernas</a></strong> - 3 series de 8-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 2: Espalda y Bíceps</h3>" +
                     "<ol>" +
@@ -138,12 +142,12 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Espalda</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Peso muerto</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalón al pecho</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pesomuerto'>Peso muerto</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbarra'>Remo con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://jalonalpecho'>Jalón al pecho</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "<li><strong>Bíceps</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con mancuernas (alternando)</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconbarra'>Curl de bíceps con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curlconmancuernasalternado'>Curl de bíceps con mancuernas (alternando)</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 3: Piernas y Abs</h3>" +
                     "<ol>" +
@@ -151,13 +155,13 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Piernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de piernas</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de piernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de piernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillas'>Sentadillas</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://prensadepiernas'>Prensa de piernas</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldepiernas'>Curl de piernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdepiernas'>Extensiones de piernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de piernas</strong> - 3 series de 15-20 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches en máquina</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdepiernas'>Elevaciones de piernas</a></strong> - 3 series de 15-20 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crunchesenmaquina'>Crunches en máquina</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 4: Hombros y Abs</h3>" +
                     "<ol>" +
@@ -165,12 +169,12 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Hombros</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar con barra</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones frontales con mancuernas</strong> - 3 series de 10-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressmilitarconbarra'>Press militar con barra</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacioneslateralesconmancuernas'>Elevaciones laterales con mancuernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesfrontalesconmancuernas'>Elevaciones frontales con mancuernas</a></strong> - 3 series de 10-15 repeticiones</li>" +
                     "<li><strong>Abs</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Planchas</strong> - 3 series de 30-60 segundos<br/>" +
-                    "&nbsp;&nbsp;- <strong>Oblicuos en máquina</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://planchas'>Planchas</a></strong> - 3 series de 30-60 segundos<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://oblicuosenmaquina'>Oblicuos en máquina</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Consejos Generales</h3>" +
                     "<ul>" +
@@ -179,6 +183,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Nutrición</strong>: Es esencial mantener una dieta rica en proteínas y calorías adecuadas para soportar el crecimiento muscular.</li>" +
                     "<li><strong>Hidratación</strong>: Beber suficiente agua a lo largo del día, especialmente antes, durante y después de los entrenamientos, para mejorar el rendimiento y la recuperación.</li>" +
                     "</ul>";
+
     String detalleRutinaGanarMasa5Dias =
             "<h3>Día 1: Pecho</h3>" +
                     "<ol>" +
@@ -186,10 +191,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press inclinado con mancuernas</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Aperturas con mancuernas en banco plano</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Pullover con mancuerna</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebanca'>Press de banca</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressinclinadoconmancuernas'>Press inclinado con mancuernas</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://aperturasconmancuernasenbancoPlano'>Aperturas con mancuernas en banco plano</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pulloverconmancuerna'>Pullover con mancuerna</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 2: Espalda</h3>" +
                     "<ol>" +
@@ -197,10 +202,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Peso muerto</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalón al pecho</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo a una mano con mancuerna</strong> - 3 series de 8-12 repeticiones por lado</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pesomuerto'>Peso muerto</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbarra'>Remo con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://jalonalpecho'>Jalón al pecho</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoaunamanoconmancuerna'>Remo a una mano con mancuerna</a></strong> - 3 series de 8-12 repeticiones por lado</li>" +
                     "</ol>" +
                     "<h3>Día 3: Piernas</h3>" +
                     "<ol>" +
@@ -208,11 +213,11 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de piernas</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de piernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de piernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de talones (pantorrillas)</strong> - 4 series de 12-15 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillas'>Sentadillas</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://prensadepiernas'>Prensa de piernas</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldepiernas'>Curl de piernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdepiernas'>Extensiones de piernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdetalonespantorrillas'>Elevaciones de talones (pantorrillas)</a></strong> - 4 series de 12-15 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 4: Hombros y Trapecios</h3>" +
                     "<ol>" +
@@ -220,10 +225,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar con barra</strong> - 4 series de 6-10 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones frontales con mancuernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Encogimientos de hombros con mancuernas para trapecios</strong> - 4 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressmilitarconbarra'>Press militar con barra</a></strong> - 4 series de 6-10 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacioneslateralesconmancuernas'>Elevaciones laterales con mancuernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesfrontalesconmancuernas'>Elevaciones frontales con mancuernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://encogimientosdehombrosconmancuernasparatrapecios'>Encogimientos de hombros con mancuernas para trapecios</a></strong> - 4 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 5: Brazos (Bíceps y Tríceps)</h3>" +
                     "<ol>" +
@@ -231,11 +236,11 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Ejercicios</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con barra</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps concentrado</strong> - 3 series de 10-12 repeticiones por brazo<br/>" +
-                    "&nbsp;&nbsp;- <strong>Press francés</strong> - 3 series de 8-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Extensiones de tríceps en polea alta</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Dips o fondos para tríceps</strong> - 3 series hasta fallo</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconbarra'>Curl de bíceps con barra</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconcentrado'>Curl de bíceps concentrado</a></strong> - 3 series de 10-12 repeticiones por brazo<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressfrances'>Press francés</a></strong> - 3 series de 8-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://extensionesdetricepsenpoleaalta'>Extensiones de tríceps en polea alta</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://dipsofondosparatriceps'>Dips o fondos para tríceps</a></strong> - 3 series hasta fallo</li>" +
                     "</ol>" +
                     "<h3>Consejos Generales</h3>" +
                     "<ul>" +
@@ -245,6 +250,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Hidratación</strong>: Beber suficiente agua es crucial para el rendimiento durante el entrenamiento y la recuperación post-entrenamiento.</li>" +
                     "</ul>";
 
+
     String detalleRutinaPerdidaGrasa2Dias =
             "<h3>Día 1: Entrenamiento de Cuerpo Completo</h3>" +
                     "<ol>" +
@@ -253,11 +259,11 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Circuito de Fuerza</strong><br/>" +
                     "&nbsp;&nbsp;- Realiza cada ejercicio durante 30 segundos, seguido de 30 segundos de descanso antes de pasar al siguiente.<br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas con peso corporal</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Flexiones de pecho</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con banda de resistencia</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Zancadas alternadas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Plancha</strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillasconpesocorporal'>Sentadillas con peso corporal</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://flexionesdepecho'>Flexiones de pecho</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbandaderesistencia'>Remo con banda de resistencia</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://zancadasalternadas'>Zancadas alternadas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://plancha'>Plancha</a></strong><br/>" +
                     "&nbsp;&nbsp;- Repite el circuito 3 veces.</li>" +
                     "<li><strong>Intervalos de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- Intervalos de sprint: Corre a máxima velocidad durante 30 segundos, seguido de 60 segundos de caminata o trote lento.<br/>" +
@@ -266,15 +272,15 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<h3>Día 2: Entrenamiento de Cuerpo Completo</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio moderado (trotar, bicicleta estática)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio moderado (trotar, bicicleta estática)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Circuito de Fuerza</strong><br/>" +
                     "&nbsp;&nbsp;- Realiza cada ejercicio durante 30 segundos, seguido de 30 segundos de descanso antes de pasar al siguiente.<br/>" +
-                    "&nbsp;&nbsp;- <strong>Burpees</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de hombros con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de piernas colgantes para abdomen</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Puentes de glúteo</strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://burpees'>Burpees</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdehombrosconmancuernas'>Press de hombros con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconmancuernas'>Curl de bíceps con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdepiernascolgantesparaabdomen'>Elevaciones de piernas colgantes para abdomen</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://puentesdegluteo'>Puentes de glúteo</a></strong><br/>" +
                     "&nbsp;&nbsp;- Repite el circuito 3 veces.</li>" +
                     "<li><strong>Intervalos de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- Intervalos en bicicleta estática: Pedalea tan rápido como puedas durante 30 segundos, seguido de 60 segundos pedaleando a un ritmo lento.<br/>" +
@@ -289,19 +295,20 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Recuperación</strong>: Asegúrate de dormir suficientes horas y de realizar estiramientos o actividades de baja intensidad los días de descanso para facilitar la recuperación.</li>" +
                     "</ul>";
 
+
     String detalleRutinaPerdidaGrasa3Dias =
             "<h3>Día 1: Entrenamiento de Cuerpo Completo (Fuerza + Cardio)</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trotar)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trotar)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Circuito de Fuerza</strong><br/>" +
                     "&nbsp;&nbsp;- Realiza cada ejercicio durante 45 segundos con 15 segundos de descanso entre ellos.<br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas con peso corporal</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Flexiones de pecho</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo en posición de plancha con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Zancadas con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches bicicleta</strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillasconpesocorporal'>Sentadillas con peso corporal</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://flexionesdepecho'>Flexiones de pecho</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoenposiciondeplancha'>Remo en posición de plancha con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://zancadasconmancuernas'>Zancadas con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crunchesbicicleta'>Crunches bicicleta</a></strong><br/>" +
                     "&nbsp;&nbsp;- Repite el circuito 3 veces.</li>" +
                     "<li><strong>Cardio Intervalos de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- 1 minuto de alta intensidad (sprints, saltos, bicicleta rápida) seguido de 1 minuto de baja intensidad.<br/>" +
@@ -316,22 +323,22 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- Alternar ejercicios de alta intensidad (20 segundos) con períodos de descanso activo (10 segundos) durante 20 minutos.<br/>" +
                     "&nbsp;&nbsp;- Incluye ejercicios como burpees, saltos al cajón, sprints, y saltos de tijera.</li>" +
                     "<li><strong>Entrenamiento de Core</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Planchas</strong> - 3 series de 30-60 segundos<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de piernas</strong> - 3 series de 10-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Russian twists</strong> - 3 series de 15-20 repeticiones por lado</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://planchas'>Planchas</a></strong> - 3 series de 30-60 segundos<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdepiernas'>Elevaciones de piernas</a></strong> - 3 series de 10-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://russiantwists'>Russian twists</a></strong> - 3 series de 15-20 repeticiones por lado</li>" +
                     "</ol>" +
                     "<h3>Día 3: Entrenamiento de Cuerpo Completo (Fuerza + Cardio)</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trotar)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trotar)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Circuito de Fuerza</strong><br/>" +
                     "&nbsp;&nbsp;- Realiza cada ejercicio durante 45 segundos con 15 segundos de descanso entre ellos.<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de pecho con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Peso muerto con kettlebell</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalón al pecho en polea</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de hombros con mancuernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Planchas con movimientos de brazo</strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://prensadepechoconmancuernas'>Prensa de pecho con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pesomuertoconkettlebell'>Peso muerto con kettlebell</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://jalonalpechoenpolea'>Jalón al pecho en polea</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdehombrosconmancuernas'>Press de hombros con mancuernas</a></strong><br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://planchasconmovimientosdebrazo'>Planchas con movimientos de brazo</a></strong><br/>" +
                     "&nbsp;&nbsp;- Repite el circuito 3 veces.</li>" +
                     "<li><strong>Cardio Intervalos de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- 1 minuto de alta intensidad (correr, bicicleta rápida, saltos) seguido de 1 minuto de baja intensidad.<br/>" +
@@ -345,41 +352,42 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Hidratación</strong>: Mantente bien hidratado para soportar un rendimiento óptimo y recuperación.</li>" +
                     "<li><strong>Monitoreo</strong>: Utiliza un monitor de frecuencia cardíaca para asegurarte de que te mantienes en el rango de alta intensidad durante los intervalos de cardio.</li>" +
                     "</ul>";
+
     String detalleRutinaPerdidaGrasa4Dias =
             "<h3>Día 1: Piernas y Cardio</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Piernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de piernas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Zancadas con mancuernas</strong> - 3 series de 12 repeticiones por pierna<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de talones (pantorrillas)</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://sentadillas'>Sentadillas</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://prensadepiernas'>Prensa de piernas</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://zancadasconmancuernas'>Zancadas con mancuernas</a></strong> - 3 series de 12 repeticiones por pierna<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacionesdetalones'>Elevaciones de talones (pantorrillas)</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "<li><strong>Cardio de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- 10 minutos de intervalos en bicicleta estática: 30 segundos a máxima velocidad, 1 minuto a velocidad moderada.</li>" +
                     "</ol>" +
                     "<h3>Día 2: Pecho y Espalda</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (saltar cuerda, trote suave)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (saltar cuerda, trote suave)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Pecho y Espalda</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalones al pecho en polea</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Pullover con mancuerna</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressdebanca'>Press de banca</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://jalonesalpechoenpolea'>Jalones al pecho en polea</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pulloverconmancuerna'>Pullover con mancuerna</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://remoconbarra'>Remo con barra</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 3: Hombros y Brazos</h3>" +
                     "<ol>" +
                     "<li><strong>Calentamiento</strong><br/>" +
-                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)<br/>" +
+                    "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)</a><br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Hombros y Brazos</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar con mancuernas</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con barra</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Tríceps en polea alta</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://pressmilitarconmancuernas'>Press militar con mancuernas</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://elevacioneslateralesconmancuernas'>Elevaciones laterales con mancuernas</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://curldebicepsconbarra'>Curl de bíceps con barra</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://tricepsenpoleaalta'>Tríceps en polea alta</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 4: Cardio y Core</h3>" +
                     "<ol>" +
@@ -389,9 +397,9 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Cardio Intenso</strong><br/>" +
                     "&nbsp;&nbsp;- 20 minutos de HIIT: Alternar 20 segundos de esfuerzo máximo (sprints, burpees, saltos de tijera) con 40 segundos de descanso activo (caminar, trote ligero).</li>" +
                     "<li><strong>Entrenamiento de Core</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Planchas</strong> - 3 series de 30-60 segundos<br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches</strong> - 3 series de 15-20 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Russian twists</strong> - 3 series de 20 repeticiones por lado</li>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://planchas'>Planchas</a></strong> - 3 series de 30-60 segundos<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://crunches'>Crunches</a></strong> - 3 series de 15-20 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <strong><a href='fitmaster://russiantwists'>Russian twists</a></strong> - 3 series de 20 repeticiones por lado</li>" +
                     "</ol>" +
                     "<h3>Consejos Generales</h3>" +
                     "<ul>" +
@@ -401,6 +409,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Hidratación</strong>: Bebe agua adecuadamente antes, durante y después de tus sesiones para mantener un rendimiento óptimo.</li>" +
                     "<li><strong>Monitoreo de Intensidad</strong>: Utiliza un monitor de frecuencia cardíaca para asegurarte de que estás trabajando en las zonas de intensidad adecuadas durante el cardio.</li>" +
                     "</ul>";
+
     String detalleRutinaPerdidaGrasa5Dias =
             "<h3>Día 1: Piernas y Cardio</h3>" +
                     "<ol>" +
@@ -408,10 +417,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Piernas</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Sentadillas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Prensa de piernas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Zancadas con mancuernas</strong> - 3 series de 12 repeticiones por pierna<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones de talones (pantorrillas)</strong> - 3 series de 15-20 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://sentadillas'><strong>Sentadillas</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://prensadepiernas'><strong>Prensa de piernas</strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://zancadasconmancuernas'><strong>Zancadas con mancuernas</a></strong> - 3 series de 12 repeticiones por pierna<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://elevacionesdetalones'><strong>Elevaciones de talones (pantorrillas)</a></strong> - 3 series de 15-20 repeticiones</li>" +
                     "<li><strong>Cardio de Alta Intensidad</strong><br/>" +
                     "&nbsp;&nbsp;- 10 minutos de intervalos en bicicleta estática: 30 segundos a máxima velocidad, 1 minuto a velocidad moderada.</li>" +
                     "</ol>" +
@@ -421,10 +430,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (saltar cuerda, trote suave)<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Pecho y Espalda</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press de banca</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Jalones al pecho en polea</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Pullover con mancuerna</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Remo con barra</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://pressdebanca'><strong>Press de banca</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://jalonesalpechoenpolea'><strong>Jalones al pecho en polea</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://pulloverconmancuerna'><strong>Pullover con mancuerna</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://remoconbarra'><strong>Remo con barra</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 3: Hombros y Brazos</h3>" +
                     "<ol>" +
@@ -432,10 +441,10 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "&nbsp;&nbsp;- 5-10 minutos de cardio ligero (bicicleta estática, trote suave)<br/>" +
                     "&nbsp;&nbsp;- Estiramientos dinámicos</li>" +
                     "<li><strong>Entrenamiento de Hombros y Brazos</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Press militar con mancuernas</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Elevaciones laterales con mancuernas</strong> - 3 series de 12-15 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Curl de bíceps con barra</strong> - 3 series de 10-12 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Tríceps en polea alta</strong> - 3 series de 10-12 repeticiones</li>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://pressmilitarconmancuernas'><strong>Press militar con mancuernas</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://elevacioneslateralesconmancuernas'><strong>Elevaciones laterales con mancuernas</a></strong> - 3 series de 12-15 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://curldebicepsconbarra'><strong>Curl de bíceps con barra</a></strong> - 3 series de 10-12 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://tricepsenpoleaalta'><strong>Tríceps en polea alta</a></strong> - 3 series de 10-12 repeticiones</li>" +
                     "</ol>" +
                     "<h3>Día 4: Cardio y Core</h3>" +
                     "<ol>" +
@@ -445,9 +454,9 @@ public class MiBaseDatos extends SQLiteOpenHelper {
                     "<li><strong>Cardio Intenso</strong><br/>" +
                     "&nbsp;&nbsp;- 20 minutos de HIIT: Alternar 20 segundos de esfuerzo máximo (sprints, burpees, saltos de tijera) con 40 segundos de descanso activo (caminar, trote ligero).</li>" +
                     "<li><strong>Entrenamiento de Core</strong><br/>" +
-                    "&nbsp;&nbsp;- <strong>Planchas</strong> - 3 series de 30-60 segundos<br/>" +
-                    "&nbsp;&nbsp;- <strong>Crunches</strong> - 3 series de 15-20 repeticiones<br/>" +
-                    "&nbsp;&nbsp;- <strong>Russian twists</strong> - 3 series de 20 repeticiones por lado</li>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://planchas'><strong>Planchas</a></strong> - 3 series de 30-60 segundos<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://crunches'><strong>Crunches</a></strong> - 3 series de 15-20 repeticiones<br/>" +
+                    "&nbsp;&nbsp;- <a href='fitmaster://russiantwists'><strong>Russian twists</a></strong> - 3 series de 20 repeticiones por lado</li>" +
                     "</ol>" +
                     "<h3>Día 5: Entrenamiento de Circuito Total del Cuerpo</h3>" +
                     "<ol>" +
@@ -498,9 +507,15 @@ public class MiBaseDatos extends SQLiteOpenHelper {
             ")";
 
 
+    private static final String TABLA_VIDEOS = "CREATE TABLE IF NOT EXISTS videos (" +
+            "nombre_ejercicio TEXT PRIMARY KEY," + // Clave primaria: nombre del ejercicio
+            "video_id TEXT" + // ID del video asociado al ejercicio
+            ")";
+
+    private Context mContext;
     public MiBaseDatos(Context context) {
         super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
-
+        mContext = context;
     }
     // Método para obtener la contraseña del usuario por su nombre de usuario
 
@@ -509,7 +524,9 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.execSQL(TABLA_USUARIO);
         db.execSQL(TABLA_RUTINAS);
         db.execSQL(TABLA_ENTRENOS);
+        db.execSQL(TABLA_VIDEOS);
         insertarRutinaInicial(db);
+        insertarVideoInicial(mContext,db);
         Log.d("MiBaseDatos", "Tablas de Base de Datos creadas...");
     }
 
@@ -519,6 +536,7 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_USUARIO);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_RUTINAS);
         db.execSQL("DROP TABLE IF EXISTS " + TABLA_ENTRENOS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLA_VIDEOS);
         onCreate(db);
     }
 
@@ -814,5 +832,37 @@ public class MiBaseDatos extends SQLiteOpenHelper {
         return frecuenciaEntreno;
     }
 
+    private void insertarVideoInicial(Context context,SQLiteDatabase db) {
+        FileReader reader = new FileReader();
+        reader.insertVideosFromTextFile(context , db);
+    }
+    @SuppressLint("Range")
+    public String obtenerVideoId( String nombre_ejercicio) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        // Columnas que queremos recuperar
+        String[] columnas = {"video_id"};
 
+        // Cláusula WHERE para especificar el usuario
+        String whereClause = "nombre_ejercicio = ?";
+
+        // Argumentos para reemplazar el placeholder en la cláusula WHERE
+        String[] whereArgs = {nombre_ejercicio};
+
+        // Realizar la consulta
+        Cursor cursor = db.query("videos", columnas, whereClause, whereArgs, null, null, null);
+
+        // Inicializar el valor de días entrenados
+        String video_id = "";
+
+        // Verificar si se encontraron resultados y obtener el valor de días entrenados
+        if (cursor.moveToFirst()) {
+            video_id = cursor.getString(cursor.getColumnIndex("video_id"));
+        }
+
+        // Cerrar el cursor
+        cursor.close();
+        Log.d("MiBaseDatos","Video ID " + video_id);
+        // Devolver el valor de días entrenados
+        return video_id;
+    }
 }
