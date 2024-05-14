@@ -19,6 +19,7 @@ public class MenuBienvenida extends AppCompatActivity {
         String usuario = "";
         if (intent != null)
              usuario = intent.getStringExtra("usuario");
+
         Button entreno_dia = findViewById(R.id.entreno_dia);
         Button rutina = findViewById(R.id.rutina);
         Button dieta = findViewById(R.id.dieta);
@@ -50,7 +51,8 @@ public class MenuBienvenida extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Toast.makeText(MenuBienvenida.this, "Botón 3 presionado", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(MenuBienvenida.this, Dieta.class);
+                startActivity(intent);
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {

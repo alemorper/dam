@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
         CheckBox recuerdame = findViewById(R.id.Recuerdame);
 
         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-        String checkbox = preferences.getString("recuerdame", "");
+        String checkbox = preferences.getString("recuerdame", "false");
         if(checkbox.equals("true")){
             Intent intent = new Intent(MainActivity.this, MenuBienvenida.class);
             startActivity(intent);
         }else if(checkbox.equals("false")){
-            Toast.makeText(this, "Porfavor, regístrate", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Porfavor, introduzca tus credenciales", Toast.LENGTH_SHORT).show();
         }
 
         MiBaseDatos MDB = new MiBaseDatos(MainActivity.this);
