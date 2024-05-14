@@ -1,8 +1,10 @@
 package com.dam.fitmaster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
@@ -88,7 +90,6 @@ public class EntrenamientoDiaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         rutina.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -98,5 +99,6 @@ public class EntrenamientoDiaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

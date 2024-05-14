@@ -10,78 +10,76 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_gradient" />
 
-    <LinearLayout
-        android:layout_width="399dp"
-        android:layout_height="634dp"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="207dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="50dp"
-            android:contentDescription="@string/logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
-
-        <Button
-            android:id="@+id/entreno_dia"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/gradient_button_mb"
-            android:padding="10dp"
-            android:text="@string/ver_entrenamiento_del_d_a"
-            android:textColor="#000000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
 
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="207dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="50dp"
+                android:contentDescription="@string/logo"
+                app:srcCompat="@drawable/logo" />
 
-        <Button
-            android:id="@+id/rutina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/gradient_button_mb"
-            android:padding="10dp"
-            android:text="@string/ver_rutina_semanal"
-            android:textColor="#000000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/entreno_dia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/gradient_button_mb"
+                android:padding="10dp"
+                android:text="@string/ver_entrenamiento_del_d_a"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
+            <Button
+                android:id="@+id/rutina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/gradient_button_mb"
+                android:padding="10dp"
+                android:text="@string/ver_rutina_semanal"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/dieta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/gradient_button_mb"
-            android:padding="10dp"
-            android:text="@string/ver_plan_nutricional"
-            android:textColor="#000000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/dieta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/gradient_button_mb"
+                android:padding="10dp"
+                android:text="@string/ver_plan_nutricional"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/gradient_button_logout"
-            android:padding="10dp"
-            android:text="@string/logout"
-            android:textColor="#000000"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/gradient_button_logout"
+                android:padding="10dp"
+                android:text="@string/logout"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
-
-
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

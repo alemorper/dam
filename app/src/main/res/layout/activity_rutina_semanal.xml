@@ -14,42 +14,47 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="16dp">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/gradient_button_mb">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_centerInParent="true">
+            app:cardElevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/gradient_button_mb"
                 android:orientation="vertical"
+                android:background="@drawable/gradient_button_mb"
                 android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tvRutinaTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Rutina Semanal"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:textColor="#000" />
-            </LinearLayout>
+                    android:text="Rutina Semanal"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
                 <WebView
                     android:id="@+id/tvRutinaContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
                     android:lineSpacingExtra="6dp"
-                    android:textColor="#666"
+                    android:textColor="#FFC400"
+                    android:textSize="16sp"
+                    android:background="@drawable/gradient_button_mb"
                     tools:ignore="WebViewLayout" />
-
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>
 </RelativeLayout>
