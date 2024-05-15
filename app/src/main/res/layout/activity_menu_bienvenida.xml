@@ -68,10 +68,25 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/btnCambiarObjetivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambiar Objetivo"
+                android:layout_margin="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/gradient_button_mb"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/dieta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
                 android:id="@+id/logout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="12dp"
                 android:background="@drawable/gradient_button_logout"
                 android:padding="10dp"
                 android:text="@string/logout"

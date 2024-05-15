@@ -7,6 +7,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.*;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -88,6 +89,10 @@ public class MiBaseDatos extends SQLiteOpenHelper implements Rutinas {
     }
 
     private void insertarRutinaInicial(SQLiteDatabase db) {
+        insertarRutina(db, "Mantenerse", "2 días a la semana", detalleRutinaGanarMasa2Dias);
+        insertarRutina(db, "Mantenerse", "3 días a la semana", detalleRutinaGanarMasa3Dias);
+        insertarRutina(db, "Mantenerse", "4 días a la semana", detalleRutinaGanarMasa4Dias);
+        insertarRutina(db, "Mantenerse", "5 días a la semana", detalleRutinaGanarMasa5Dias);
         insertarRutina(db, "Ganar masa muscular", "2 días a la semana", detalleRutinaGanarMasa2Dias);
         insertarRutina(db, "Ganar masa muscular", "3 días a la semana", detalleRutinaGanarMasa3Dias);
         insertarRutina(db, "Ganar masa muscular", "4 días a la semana", detalleRutinaGanarMasa4Dias);
@@ -403,5 +408,26 @@ public class MiBaseDatos extends SQLiteOpenHelper implements Rutinas {
         Log.d("MiBaseDatos","Video ID " + video_id);
         // Devolver el valor de días entrenados
         return video_id;
+    }
+
+    public boolean actualizarObjetivoFrecuenciaUsuario(String usuario, String nuevoObjetivo, String nuevaFrecuencia) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put("objetivo", nuevoObjetivo);
+        cv.put("frecuencia_entreno", nuevaFrecuencia);
+
+        try {
+            int result = db.update("usuarios", cv, "usuario=?", new String[]{usuario});
+            db.close();
+            return result > 0;
+        } catch (SQLiteConstraintException e) {
+            Log.e("MiBaseDatos", "Error al actualizar: ", e);
+            return false;
+        } finally {
+            if (db.isOpen()) {
+                db.close();
+            }
+        }
     }
 }

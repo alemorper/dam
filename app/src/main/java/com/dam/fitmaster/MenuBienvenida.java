@@ -68,6 +68,17 @@ public class MenuBienvenida extends AppCompatActivity {
             }
         });
 
+        Button cambiarObjetivo = findViewById(R.id.btnCambiarObjetivo);
+
+        cambiarObjetivo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuBienvenida.this, CambiarObjetivoActivity.class);
+                intent.putExtra("usuario", finalUsuario); // Pasar el usuario
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
